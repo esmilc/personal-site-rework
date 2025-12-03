@@ -107,7 +107,7 @@ function ExperienceSection() {
     <div className="space-y-3 text-sm text-zinc-100">
       {/* cards or “git log” style entries */}
       <p className="font-mono text-emerald-300">~/experience</p>
-      <p>// Fill in Google, CodePath, UF, etc.</p>
+      <p>...</p>
     </div>
   );
 }
@@ -116,9 +116,9 @@ function ProjectsSection() {
   return (
     <div className="font-mono text-sm text-zinc-100 space-y-2">
       <p className="text-emerald-300">ls projects/</p>
-      <p>drwx  2024  MindMates        - Gamified mental health companion</p>
-      <p>drwx  2024  GatorMarketplace - UF-only marketplace for safe trading</p>
-      <p>drwx  2023  WadFS            - Userspace filesystem over WAD files</p>
+      <p>drwx  2024  ...        - ...</p>
+      <p>drwx  2024  ... - ...</p>
+      <p>drwx  2023  ...            - ...</p>
     </div>
   );
 }
@@ -127,7 +127,7 @@ function SkillsSection() {
   return (
     <div className="space-y-2 text-sm text-zinc-100">
       <p className="font-mono text-emerald-300">~/skills</p>
-      <p>// tags for languages, frameworks, systems, teaching, leadership...</p>
+      <p>...</p>
     </div>
   );
 }
@@ -136,7 +136,7 @@ function ContactSection() {
   return (
     <div className="space-y-2 text-sm text-zinc-100">
       <p className="font-mono text-emerald-300">~/contact</p>
-      <p>// links + maybe a “mailto” or contact form later</p>
+      <p>..</p>
     </div>
   );
 }
