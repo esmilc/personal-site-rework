@@ -1,8 +1,14 @@
-// components/PopupWindow.tsx
+// components/shell/PopupWindow.tsx
 "use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+import AboutSection from "@/components/sections/AboutSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
+import SkillsSection from "@/components/sections/SkillsSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 const SECTIONS = ["about", "experience", "projects", "skills", "contact"] as const;
 type Section = (typeof SECTIONS)[number];
@@ -27,12 +33,12 @@ export default function PopupWindow() {
           <span className="h-3 w-3 rounded-full bg-amber-400" />
           <span className="h-3 w-3 rounded-full bg-emerald-500" />
           <span className="ml-3 font-mono text-[11px] text-zinc-400">
-            esmil@cs: ~/personal-site
+            esmil@cs: ~/personal-site [IN BUILD]
           </span>
         </div>
         <div className="flex items-center gap-3 text-[11px] font-mono text-zinc-500">
           <span>github</span>
-          <span>linkedin</span>
+          <span><a href="https://www.linkedin.com/in/esmilc" target="_blank" rel="noopener noreferrer">linkedin</a></span>
           <span className="rounded-full border border-white/10 px-2 py-0.5">
             dark
           </span>
@@ -85,58 +91,6 @@ export default function PopupWindow() {
         <span>127.0.0.1</span>
         <span>Built with Next.js • Tailwind • Framer Motion</span>
       </div>
-    </div>
-  );
-}
-
-/* --- super simple placeholder sections; fill these with real content later --- */
-
-function AboutSection() {
-  return (
-    <div className="font-mono text-sm text-zinc-200 space-y-2">
-      <p className="text-emerald-300">~/about/esmil.log</p>
-      <p>&gt; booting esmil.exe...</p>
-      <p>&gt; loading modules: applied-ml, full-stack, teaching, mentoring</p>
-      <p>&gt; status: online, exploring new systems to break + build</p>
-    </div>
-  );
-}
-
-function ExperienceSection() {
-  return (
-    <div className="space-y-3 text-sm text-zinc-100">
-      {/* cards or “git log” style entries */}
-      <p className="font-mono text-emerald-300">~/experience</p>
-      <p>...</p>
-    </div>
-  );
-}
-
-function ProjectsSection() {
-  return (
-    <div className="font-mono text-sm text-zinc-100 space-y-2">
-      <p className="text-emerald-300">ls projects/</p>
-      <p>drwx  2024  ...        - ...</p>
-      <p>drwx  2024  ... - ...</p>
-      <p>drwx  2023  ...            - ...</p>
-    </div>
-  );
-}
-
-function SkillsSection() {
-  return (
-    <div className="space-y-2 text-sm text-zinc-100">
-      <p className="font-mono text-emerald-300">~/skills</p>
-      <p>...</p>
-    </div>
-  );
-}
-
-function ContactSection() {
-  return (
-    <div className="space-y-2 text-sm text-zinc-100">
-      <p className="font-mono text-emerald-300">~/contact</p>
-      <p>..</p>
     </div>
   );
 }
