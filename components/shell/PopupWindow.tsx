@@ -5,17 +5,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import AboutSection from "@/components/sections/AboutSection";
-import ExperienceSection from "@/components/sections/ExperienceSection";
+import InternshipExperienceSection from "@/components/sections/InternshipExperienceSection";
+import LeadershipExperienceSection from "@/components/sections/LeadershipExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ContactSection from "@/components/sections/ContactSection";
 
-const SECTIONS = ["about", "experience", "projects", "skills", "contact"] as const;
+const SECTIONS = ["about", "internship_experience", "leadership_experience", "projects", "skills", "contact"] as const;
 type Section = (typeof SECTIONS)[number];
 
 const sectionLabels: Record<Section, string> = {
   about: ">_ About",
-  experience: "{} Experience",
+  internship_experience: "{} Internship Experience",
+  leadership_experience: "[] Leadership Experience",
   projects: "</> Projects",
   skills: "∑ Skills",
   contact: "@ Contact",
@@ -47,7 +49,7 @@ export default function PopupWindow() {
 
       <div className="flex">
         {/* Sidebar */}
-        <nav className="flex w-40 flex-col border-r border-white/10 bg-zinc-950/60 p-2 text-xs">
+        <nav className="flex w-54 flex-col border-r border-white/10 bg-zinc-950/60 p-2 text-xs">
           {SECTIONS.map((key) => (
             <button
               key={key}
@@ -65,7 +67,7 @@ export default function PopupWindow() {
         </nav>
 
         {/* Content area */}
-        <div className="relative min-h-[320px] flex-1 overflow-hidden p-4 md:p-6">
+        <div className="relative h-[45vh] flex-1 overflow-y-auto p-4 md:p-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -76,7 +78,8 @@ export default function PopupWindow() {
               className="h-full"
             >
               {active === "about" && <AboutSection />}
-              {active === "experience" && <ExperienceSection />}
+              {active === "internship_experience" && <InternshipExperienceSection />}
+              {active === "leadership_experience" && <LeadershipExperienceSection />}
               {active === "projects" && <ProjectsSection />}
               {active === "skills" && <SkillsSection />}
               {active === "contact" && <ContactSection />}
