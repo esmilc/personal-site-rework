@@ -58,10 +58,10 @@ export default function InteractiveTerminal() {
     const handler = commands[cmd];
 
     const entries: Entry[] = [
-      { type: "input", text: `${PROMPT} ${raw}` },
+      { type: "input" as const, text: `${PROMPT} ${raw}` },
       ...(handler
         ? handler(args)
-        : [{ type: "output", text: `Command not found: ${cmd}` }]),
+        : [{ type: "output" as const, text: `Command not found: ${cmd}` }]),
     ];
 
     // Handle clear specially
