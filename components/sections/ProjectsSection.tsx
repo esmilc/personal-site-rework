@@ -28,6 +28,7 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const [openId, setOpenId] = useState<string | null>(null);
   const [imageProjectId, setImageProjectId] = useState<string | null>(null);
 
   const imageProject = imageProjectId
@@ -67,13 +68,13 @@ export default function ProjectsSection() {
                     {project.description}
                   </p>
 
-                  <button
+                  {/* <button
                     type="button"
                     onClick={() => setImageProjectId(project.id)}
                     className="inline-flex items-center gap-1 rounded border border-zinc-700 px-2 py-[3px] text-[10px] text-zinc-200 hover:border-emerald-400 hover:text-emerald-300 transition"
                   >
                     see image
-                  </button>
+                  </button> */}
                 </div>
               )}
             </div>
