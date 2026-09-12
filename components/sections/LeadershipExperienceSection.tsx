@@ -8,8 +8,13 @@ export default function LeadershipExperienceSection() {
         <p className="font-semibold">CodePath · Tech Fellow Manager</p>
         <p className="text-xs text-zinc-400">May 2025 - Present · Remote</p>
         <ul className="mt-1 list-disc pl-5">
+          <li>Manage Tech Fellows across Technical Interview Prep, Foundations of AI Engineering, and Open Source Capstone.</li>
+
           <li>Took initiative to develop a custom Google App Script automating student triage for 300+ participants, streamlining
             class flow and eliminating manual setup bottlenecks.</li>
+
+          <li>Led a diverse, remote team of 25 Tech Fellows, fostering collaboration and driving instructional quality
+            improvements impacting 300+ students.</li>
 
           <li>Directed weekly meetings with 25 Tech Fellows to assess performance, give feedback, and develop plans for growth,
             improving overall instructional quality.</li>
@@ -32,6 +37,9 @@ export default function LeadershipExperienceSection() {
             sure they succeeded in keeping up with the course's pace.</li>
 
           <li>Surfaced student concerns and feedback and discuss course progress with Tech Fellow Manager during check-ins.</li>
+
+          <li>Collaborated closely with the Instructional PM and CodePath Operations Team to support and improve the student
+            learning experience.</li>
           
           <li>Facilitated engaging discussions and activities to enhance student understanding of course material.</li>
 

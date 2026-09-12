@@ -26,7 +26,7 @@ const commands: Record<string, (args: string[]) => Entry[]> = {
   echo: (args) => [{ type: "output", text: args.join(" ") }],
   about: () => [{ type: "output", text: "Esmil: applied ML + full-stack + teaching." }],
   experience: () => [
-    { type: "output", text: "Experience: Google, CodePath, Florida Department of Transportation" },
+    { type: "output", text: "Experience: Google, Bloomberg, CodePath, Florida Department of Transportation" },
   ],
   projects: () => [{ type: "output", text: "Use the Projects tab to see projects." }],
   skills: () => [
